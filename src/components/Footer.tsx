@@ -19,10 +19,10 @@ function Footer() {
         ni gestionar trámites para terceros.
       </p>
       <nav aria-label="Enlaces legales del pie">
-        <a id="aviso-legal" href="#aviso-legal">Aviso legal</a>
-        <a id="privacidad" href="#privacidad">Política de privacidad</a>
-        <a id="terminos" href="#terminos">Términos del servicio</a>
-        <a id="reembolso" href="#reembolso">Política de reembolso</a>
+        <a href="/legal/aviso-legal.html">Aviso legal</a>
+        <a href="/legal/politica-privacidad.html">Política de privacidad</a>
+        <a href="/legal/terminos-servicio.html">Términos del servicio</a>
+        <a href="/legal/politica-reembolso.html">Política de reembolso</a>
       </nav>
     </footer>
   );

@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@600;700;800&display=swap");
+
+:root {
+  color: #f7fbff;
+  background: #05091a;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --bg: #05091a;
+  --surface: rgba(12, 20, 43, 0.82);
+  --cyan: #00e0ff;
+  --ink: #f7fbff;
+  --muted: #9daac2;
+  --muted-strong: #c5d1e6;
+  --line: rgba(120, 180, 255, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(0, 224, 255, 0.16), transparent 30%),
+    linear-gradient(180deg, #05091a 0%, #071024 48%, #05091a 100%);
+}
+
+.legal-shell,
+.legal-page {
+  width: min(920px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 56px;
+}
+
+.legal-header,
+.legal-topbar,
+.legal-card {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+}
+
+.legal-header,
+.legal-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  padding: 16px 18px;
+  border-radius: 18px;
+}
+
+.brand,
+.brand-link {
+  color: var(--ink);
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.legal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.legal-actions a,
+.help-link,
+.primary-action,
+.secondary-action,
+.text-link {
+  color: var(--cyan);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.legal-actions a,
+.help-link,
+.primary-action,
+.secondary-action {
+  padding: 9px 12px;
+  border: 1px solid rgba(0, 224, 255, 0.24);
+  border-radius: 12px;
+  background: rgba(0, 224, 255, 0.08);
+}
+
+.legal-card {
+  padding: clamp(22px, 4vw, 42px);
+  border-radius: 22px;
+}
+
+.legal-card section {
+  margin-top: 30px;
+}
+
+.legal-card section h2 {
+  margin-top: 0;
+}
+
+.legal-card .legal-actions {
+  margin-top: 32px;
+}
+
+h1,
+h2 {
+  color: var(--ink);
+  font-family: "Space Grotesk", Inter, sans-serif;
+  letter-spacing: 0;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  line-height: 1;
+}
+
+h2 {
+  margin: 32px 0 12px;
+  font-size: clamp(1.2rem, 3vw, 1.55rem);
+}
+
+p,
+li {
+  color: var(--muted-strong);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.meta,
+.eyebrow,
+.updated,
+.note {
+  color: var(--muted);
+}
+
+.eyebrow,
+.updated {
+  margin: 0 0 10px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.note,
+.highlight {
+  padding: 14px 16px;
+  border: 1px solid rgba(0, 224, 255, 0.18);
+  border-radius: 14px;
+  background: rgba(0, 224, 255, 0.06);
+}
+
+.highlight {
+  color: var(--ink);
+}
+
+ul {
+  padding-left: 22px;
+}
+
+strong {
+  color: var(--ink);
+}
+
+code {
+  color: var(--cyan);
+  font-family: "JetBrains Mono", monospace;
+}
+
+@media (max-width: 560px) {
+  .legal-header,
+  .legal-topbar {
+    align-items: flex-start;
+  }
+
+  .legal-actions {
+    width: 100%;
+  }
+}
