@@ -1,6 +1,6 @@
 # TuCitaBot.es Web
 
-Carpeta separada para la futura pagina web de `tucitabot.es`.
+Landing publica de `tucitabot.es` para presentar TuCita, explicar el servicio y llevar al usuario al bot de Telegram.
 
 Repo GitHub:
 
@@ -12,10 +12,18 @@ Estado actual:
 
 - Repo independiente creado.
 - Rama principal: `main`.
-- Primer commit subido con documentacion inicial.
-- Sin codigo de aplicacion todavia.
+- Base tecnica creada con Vite + React + TypeScript.
+- Frontend estatico sin backend, secretos ni variables privadas.
 
 Esta carpeta existe para aislar la landing de marketing del bot principal. El bot de Telegram, el scraper, pagos, base de datos y tests actuales siguen viviendo en la raiz del proyecto y en sus carpetas actuales.
+
+## Stack
+
+- Vite
+- React
+- TypeScript
+- CSS normal
+- GitHub Pages con dominio propio `tucitabot.es`
 
 ## Proposito
 
@@ -41,31 +49,61 @@ Esta carpeta no debe modificar:
 
 La web debe poder desarrollarse, probarse y desplegarse de forma independiente.
 
+## Comandos
+
+Instalar dependencias:
+
+```powershell
+npm install
+```
+
+Arrancar entorno local:
+
+```powershell
+npm run dev
+```
+
+Crear build de produccion:
+
+```powershell
+npm run build
+```
+
+Previsualizar build:
+
+```powershell
+npm run preview
+```
+
+## CTA Principal
+
+La landing envia usuarios al bot:
+
+```text
+https://t.me/TuCitaMadrid_bot?start=landing
+```
+
+## Nota Importante
+
+TuCita no pertenece a la Administracion Publica. Es un servicio privado independiente que requiere autorizacion expresa del usuario.
+
+## Deploy Previsto
+
+Deploy previsto en GitHub Pages con dominio propio:
+
+```text
+tucitabot.es
+```
+
+El archivo `public/CNAME` contiene el dominio para GitHub Pages.
+
 ## Plan de Producto
 
 El plan completo de marketing, copy y diseño esta documentado en `PROJECT_WEB.md`.
 
-## Stack Pendiente de Confirmar
-
-Opcion recomendada:
-
-```text
-Vite + React + TypeScript
-CSS normal o Tailwind
-```
-
-Opcion simple:
-
-```text
-HTML + CSS + JS estatico
-```
-
-No hay codigo de aplicacion creado todavia. Esta carpeta queda preparada como espacio seguro para construir la web cuando se apruebe el siguiente paso.
-
 ## Flujo Esperado
 
-1. Confirmar stack.
-2. Crear estructura inicial de la web dentro de esta carpeta.
-3. Construir landing responsive.
-4. Conectar CTA a `https://t.me/TuCitaMadrid_bot?start=landing`.
-5. Preparar deploy para `tucitabot.es`.
+1. Revisar la base local.
+2. Mejorar diseño visual y responsive.
+3. Añadir paginas legales reales.
+4. Preparar deploy para `tucitabot.es`.
