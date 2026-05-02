@@ -1,203 +1,130 @@
-# TuCitaBot.es - Plan Web
+# TuCitaBot.es - Proyecto WEB
 
-## Estado Actual
+Fecha de actualizacion: 3 de mayo de 2026
 
-Actualizado: 2 de mayo de 2026.
+## Resumen
 
-Hecho:
-
-- Repo GitHub independiente creado: `tuimagenstudios/tucitabot.es`.
-- URL: `https://github.com/tuimagenstudios/tucitabot.es`.
-- Visibilidad actual: privado.
-- Rama principal: `main`.
-- Primer commit subido con documentacion inicial.
-- Carpeta local: `WEB/`.
-- Separado del repo del bot para evitar romper la aplicacion principal.
-
-Pendiente:
-
-- Confirmar stack.
-- Crear codigo inicial de la landing.
-- Añadir responsive.
-- Preparar deploy.
-- Apuntar dominio `tucitabot.es`.
-
-## Objetivo
-
-Crear la landing principal de `tucitabot.es` para explicar TuCita, generar confianza y llevar al usuario al bot de Telegram.
-
-La pagina debe comunicar en pocos segundos:
-
-- El usuario no consigue cita de Extranjeria.
-- TuCita vigila 24/7 y puede reservar con autorizacion.
-- El servicio es privado, independiente y no pertenece a la Administracion Publica.
-- Los datos se tratan con autorizacion, cifrado y opcion de borrado.
-- El pago se gestiona con Stripe.
-
-## Estructura
-
-Desktop: una pantalla principal con hero, CTA y pestañas.
+`TuCitaBot.es` es la landing publica de entrada al bot TuCita. La web vive en `TuCita/WEB`, en un repo independiente y publico:
 
 ```text
-Header minimo
-Hero visual: bot + mensaje + persona
-CTA: Anotarme gratis
-Microcopy: Lanzamiento inminente · Primeros 20 usuarios sin coste
-Tabs: Como funciona · Seguro · Precio · FAQ
-Panel dinamico con contenido corto
-Legal minimo
+https://github.com/tuimagenstudios/tucitabot.es
 ```
 
-Movil: hero primero y pestañas como acordeon compacto, permitiendo scroll si hace falta.
+El bot vive separado en `TuCita/BOT`, permanece privado y no debe tocarse para cambios de la web.
 
-## Hero
+## Estado publicado
 
-Headline:
+- Dominio: `https://tucitabot.es`
+- HTTPS: activo y forzado.
+- `www`: redirige al dominio principal.
+- Deploy: GitHub Pages con GitHub Actions.
+- Workflow: `.github/workflows/deploy.yml`.
+- Build: Vite genera `dist/`.
+- `public/CNAME`: `tucitabot.es`.
+- `vite.config.ts`: `base: "/"`.
 
-```text
-Llevas semanas sin cita.
-TuCita la vigila y la reserva por ti.
-```
+## Stack
 
-Subcopy:
+- Vite.
+- React.
+- TypeScript.
+- CSS normal.
+- Sin backend.
+- Sin formularios.
+- Sin analiticas.
+- Sin cookies propias.
+- Sin secretos.
 
-```text
-Un bot privado para citas de Extranjeria en Madrid.
-Funciona 24/7, con autorizacion legal y datos cifrados.
-```
+## Landing
 
-CTA:
+La landing dark premium ya fue aprobada en desktop y movil.
 
-```text
-Anotarme gratis ->
-```
+Identidad visual:
 
-Nota:
+- Fondo principal: `#05091a`.
+- Acento principal: `#00e0ff`.
+- Tipografia de titulos: Space Grotesk.
+- Tipografia de cuerpo: Inter.
+- Microcopy tecnico: JetBrains Mono.
+- Visual propio en CSS, sin imagenes externas.
 
-```text
-Servicio privado independiente. No pertenecemos a la Administracion Publica.
-```
+Header final:
 
-## Pestaña: Como Funciona
+- `Como funciona`
+- `Precio`
+- `Ayuda y consultas`
 
-```text
-1. Te registras desde Telegram
-2. Firmas la autorizacion y tus datos quedan cifrados
-3. TuCita vigila cada 3 minutos y reserva cuando aparece hueco
+CTA principal:
 
-Tu solo te presentas a la cita.
-```
+- `https://t.me/TuCitaMadrid_bot?start=landing`
 
-## Pestaña: Seguro
+Ayuda guiada:
 
-```text
-Contrato de autorizacion real
-Datos personales cifrados
-Borrado de datos con /revocar
-Pagos gestionados por Stripe
+- `https://t.me/TuCitaMadrid_bot?start=web_ayuda`
 
-No es magia. Es tecnologia legal.
-```
+## Seguridad de copy
 
-## Pestaña: Precio
+La web debe mantenerse como puerta de entrada al bot, no como canal de gestion manual.
 
-```text
-Otros servicios: 59 EUR - 250 EUR
-TuCita: desde 9,99 EUR
+Reglas actuales:
 
-Lite   9,99 EUR  · 1 cita
-Pro    19,99 EUR · 3 citas
-VIP    39 EUR    · 5 citas
+- Sin enlaces de correo en landing.
+- Sin correo publico en landing.
+- Sin promesa de atencion humana directa.
+- Sin promesa de respuesta inmediata.
+- Sin gestion para terceros.
+- Sin asesoria juridica.
+- Sin promesas absolutas sobre conseguir cita.
+- Planes personales e intransferibles.
+- Documentos y datos sensibles solo dentro del flujo autorizado del bot.
 
-Si no conseguimos cita en 30 dias, devolucion total.
-```
+## Paginas legales
 
-## Pestaña: FAQ
+Paginas publicadas:
 
-```text
-¿Es legal?
-Si. Firmas una autorizacion de representacion.
+- `/legal/aviso-legal.html`
+- `/legal/politica-privacidad.html`
+- `/legal/terminos-servicio.html`
+- `/legal/politica-reembolso.html`
 
-¿Y si no hay cita?
-Si no conseguimos cita en 30 dias, devolucion total.
+Footer:
 
-¿Puedo borrar mis datos?
-Si. Con /revocar eliminamos tus datos personales.
+- Enlaza las cuatro paginas legales reales.
+- Mantiene texto de independencia frente a la Administracion Publica.
+- Mantiene limites de uso personal, planes intransferibles y no terceros.
 
-¿Quien esta detras?
-Tuimagen Studios.
+Datos legales actuales:
 
-Ayuda y consultas:
-https://t.me/TuCitaMadrid_bot?start=web_ayuda
+- Identificacion fiscal: pendiente de revision legal.
+- Domicilio legal: pendiente de definir.
+- No publicar numero de llamada.
+- Email legal temporal solo para comunicaciones legales, privacidad y ejercicio de derechos: `tuimagenstudio@gmail.com`.
+- La ayuda operativa del servicio se canaliza por el bot.
 
-Primero te guia el asistente. Si hace falta revisar tu caso, podras dejar una consulta por escrito dentro del bot.
-```
+## Historial y privacidad
 
-## Tono Visual
+Se limpio el historial publico del repo WEB con `git-filter-repo` para retirar datos personales que no debian quedar en el historial.
 
-Moderno, directo y confiable.
+- Force-push realizado con `--force-with-lease`.
+- Commit final limpio tras limpieza: `521aff0 Protege datos personales en paginas legales`.
+- Commit favicon posterior: `d19fec8 Agrega favicon de marca TuCita`.
+- Repo remoto y local limpios de domicilio personal completo, numero de llamada e identificacion fiscal real.
+- Clones antiguos del repo WEB deben reclonarse o sincronizarse con cuidado.
 
-Evitar:
+## Favicon
 
-- Estetica infantil.
-- Landing oscura tipo crypto.
-- Exceso de emojis.
-- Promesas absolutas como "cita garantizada mañana".
-- Confusion con una web oficial de la Administracion.
+- Archivo: `public/favicon.svg`.
+- Monograma: `TC`.
+- Fondo: `#05091a`.
+- Acento: `#00e0ff`.
+- `index.html` incluye favicon SVG y `theme-color`.
 
-Paleta sugerida:
+## Pendientes futuros
 
-```text
-Fondo: blanco frio o gris muy claro
-Principal: azul confianza
-Acento: verde exito
-Texto: gris carbon
-Aviso lanzamiento: amarillo suave
-```
-
-## CTA
-
-Destino recomendado:
-
-```text
-https://t.me/TuCitaMadrid_bot?start=landing
-```
-
-## Legal Minimo
-
-La pagina debe incluir enlaces o secciones para:
-
-- Aviso legal.
-- Politica de privacidad.
-- Terminos del servicio.
-- Politica de reembolso.
-
-Texto minimo visible:
-
-```text
-TuCita es un servicio privado independiente y no pertenece a la Administracion Publica.
-El uso del servicio requiere autorizacion aceptada por el propio titular dentro del bot.
-Los pagos se gestionan mediante Stripe.
-Ayuda y consultas: https://t.me/TuCitaMadrid_bot?start=web_ayuda
-Por seguridad, no se reciben documentos ni datos sensibles fuera del flujo autorizado del bot.
-```
-
-## Stack Recomendado
-
-```text
-Vite + React + TypeScript
-CSS normal o Tailwind
-Deploy en GitHub Pages con dominio propio `tucitabot.es`
-```
-
-## Prioridad
-
-1. Hecho: crear repo independiente.
-2. Hecho: subir documentacion inicial.
-3. Hecho: confirmar stack Vite + React + TypeScript + CSS normal.
-4. Hecho: crear landing estatica inicial.
-5. Hecho: añadir responsive base.
-6. Hecho: conectar CTA a Telegram.
-7. Pendiente: añadir legales minimos reales.
-8. Hecho: preparar deploy con GitHub Pages.
-9. Pendiente: apuntar dominio `tucitabot.es`.
+1. Revision legal final antes de campanas fuertes.
+2. Definir domicilio legal o profesional seguro.
+3. Definir identificacion fiscal publica si corresponde.
+4. Crear correo legal del dominio si conviene.
+5. Actualizar GitHub Actions por warning futuro de Node.js 20.
+6. Alinear contrato del BOT con uso personal, sin terceros y planes intransferibles.
+7. Crear o fortalecer flujo de ayuda IA dentro del bot.

@@ -1,257 +1,112 @@
-# TuCitaBot.es - Checkpoint
+# TuCitaBot.es - Checkpoint Final WEB
 
 Fecha: 3 de mayo de 2026
 
-## Estado General
+## Estado final WEB
 
-La web `tucitabot.es` queda documentada como landing publica de entrada al bot TuCita. El paso actual se considera cerrado a nivel tecnico, visual, copy, seguridad basica y despliegue.
+- Dominio publico: `https://tucitabot.es`
+- HTTPS: activo y forzado.
+- `www`: redirige al dominio principal.
+- Hosting: GitHub Pages.
+- Deploy: GitHub Actions con `.github/workflows/deploy.yml`.
+- Repo WEB: publico, limpio y separado del bot.
+- Stack: Vite + React + TypeScript + CSS normal.
+- WEB permanece estatica: sin backend, formularios, analiticas ni secretos.
+- Landing dark premium aprobada en desktop y movil.
 
-## Estructura Local
+Header final:
 
-```text
-TuCita/
-  BOT/
-  WEB/
-```
-
-## BOT
-
-- Ruta: `TuCita/BOT`
-- Repo: `https://github.com/tuimagenstudios/TuCita`
-- Visibilidad: privado
-- Estado: separado de la web
-- Regla: no tocar BOT para cambios de WEB
-- Tests conocidos: 48 passed
-- Funcion: bot Telegram, scraper, monitor, pagos Stripe, PostgreSQL, legal/autorizacion, cifrado, auditoria y RGPD
-- `.env` local no trackeado
-- Sin cambios funcionales recientes por el trabajo de la web
-
-## WEB
-
-- Ruta: `TuCita/WEB`
-- Repo: `https://github.com/tuimagenstudios/tucitabot.es`
-- Visibilidad: publico
-- Rama: `main`
-- Ultimo commit confirmado: `9140d19 Ajusta ayuda guiada y limites de uso en landing`
-- Stack: Vite + React + TypeScript + CSS normal
-- Sin backend
-- Sin formularios
-- Sin analiticas
-- Sin imagenes externas
-- Sin secretos
-
-## Deploy
-
-- Hosting: GitHub Pages
-- Workflow: `.github/workflows/deploy.yml`
-- Build type: GitHub Actions
-- Ultimo workflow revisado: `Deploy GitHub Pages`
-- Estado ultimo deploy: success
-- Dominio principal: `https://tucitabot.es/`
-- `www`: redirige a `https://tucitabot.es/`
-- `public/CNAME`: `tucitabot.es`
-- `vite.config.ts`: `base: "/"`
-- GitHub Pages: `status built`
-- HTTPS: activo
-- Enforce HTTPS: activo
-
-## DNS Hostinger
-
-- Dominio: `tucitabot.es`
-- DNSSEC: no activo
-- Nameservers:
-  - `orbit.dns-parking.com`
-  - `horizon.dns-parking.com`
-- Registros:
-  - `A @ 185.199.108.153`
-  - `A @ 185.199.109.153`
-  - `A @ 185.199.110.153`
-  - `A @ 185.199.111.153`
-  - `CNAME www tuimagenstudios.github.io`
-- Estado auditoria: DNS resuelve correctamente.
-
-## Identidad Visual
-
-- Direccion: dark premium, tech-bold, confiable, moderna y limpia
-- Fondo principal: `#05091a`
-- Acento / CTA: `#00e0ff`
-- Titulos: Space Grotesk
-- Cuerpo: Inter
-- Microcopy / labels: JetBrains Mono
-- Visual hero: propio CSS, sin assets externos
-- No estilo crypto generico
-- No estetica de gestoria aburrida
-- No aspecto de bot pirata
-
-## Navegacion Actual
-
-Header:
-
-```text
-TuCita
-Madrid · Extranjeria
-Servicio privado
-Como funciona
-Precio
-Ayuda y consultas
-```
-
-- `Como funciona` apunta a `#como-funciona`
-- `Precio` apunta a `#precio` y activa la pestaña de precio
-- `Ayuda y consultas` apunta a `https://t.me/TuCitaMadrid_bot?start=web_ayuda`
-
-Footer:
-
-- Mantiene enlaces legales:
-  - Aviso legal
-  - Politica de privacidad
-  - Terminos del servicio
-  - Politica de reembolso
-- No muestra correo
-- No usa `mailto`
-
-## CTAs
+- `Como funciona`
+- `Precio`
+- `Ayuda y consultas`
 
 CTA principal:
 
-```text
-Anotarme gratis -> https://t.me/TuCitaMadrid_bot?start=landing
-```
+- `https://t.me/TuCitaMadrid_bot?start=landing`
 
-Ayuda / consultas:
+Ayuda guiada:
 
-```text
-Ayuda y consultas -> https://t.me/TuCitaMadrid_bot?start=web_ayuda
-Iniciar consulta guiada -> https://t.me/TuCitaMadrid_bot?start=web_ayuda
-Resolver dudas con la IA -> https://t.me/TuCitaMadrid_bot?start=web_ayuda
-```
+- `https://t.me/TuCitaMadrid_bot?start=web_ayuda`
 
-Todos los enlaces externos a Telegram usan:
+## Seguridad y copy
 
-```text
-target="_blank"
-rel="noreferrer"
-```
+- Sin enlaces de correo en la landing.
+- Sin correo publico en la landing.
+- Sin promesa de atencion humana directa.
+- Sin promesa de respuesta inmediata.
+- Sin gestion para terceros.
+- Sin asesoria juridica.
+- Sin promesas absolutas sobre conseguir cita.
+- Planes personales e intransferibles.
+- Documentos y datos sensibles solo dentro del flujo autorizado del bot.
+- El contrato y la aceptacion real ocurren dentro del bot.
+- Cada titular debe usar su propia cuenta, aceptar la autorizacion y contratar su propio plan.
 
-## Copy y Seguridad
+## Paginas legales
 
-Decisiones cerradas:
+Publicadas y enlazadas desde el footer:
 
-- La web es puerta de entrada al bot.
-- No hay contacto por correo.
-- No hay soporte humano directo prometido.
-- No hay gestion por terceros.
-- El contrato/aceptacion real ocurre dentro del bot.
-- Cada titular debe usar el bot desde su propia cuenta, aceptar su autorizacion y contratar su propio plan.
+- `/legal/aviso-legal.html`
+- `/legal/politica-privacidad.html`
+- `/legal/terminos-servicio.html`
+- `/legal/politica-reembolso.html`
 
-Frases clave publicadas:
+Estado legal publicado:
 
-```text
-Por seguridad, no se reciben documentos ni datos sensibles fuera del flujo autorizado del bot.
-```
+- Identificacion fiscal: pendiente de revision legal.
+- Domicilio legal: pendiente de definir.
+- No publicar numero de llamada.
+- Email legal temporal solo para comunicaciones legales, privacidad y ejercicio de derechos: `tuimagenstudio@gmail.com`.
+- Para ayuda sobre el servicio, el canal principal es el bot de TuCita.
 
-```text
-TuCita trabaja con procesos guiados, registro dentro del bot y autorizacion aceptada por el propio titular. No ayudamos a falsificar datos, saltarse requisitos legales ni gestionar tramites para terceros.
-```
+## Historial y privacidad
 
-```text
-Los planes son personales e intransferibles. Las citas incluidas solo pueden usarse por el titular que completo el flujo dentro del bot.
-```
+- Se limpio el historial publico con `git-filter-repo`.
+- Se realizo `push --force-with-lease` correctamente.
+- Commit final limpio tras limpieza de historial: `521aff0 Protege datos personales en paginas legales`.
+- Commit posterior de favicon: `d19fec8 Agrega favicon de marca TuCita`.
+- Repo remoto y local limpios de domicilio personal completo, numero de llamada e identificacion fiscal real.
+- Advertencia: clones antiguos del repo WEB deben reclonarse o sincronizarse con cuidado.
 
-No debe volver a aparecer:
+## Favicon
 
-- `mailto`
-- `hola@`
-- `Contacto:`
-- `Hablar con soporte`
-- `Hablar por Telegram`
-- `soporte inmediato`
-- `gestionar tramites sin autorizacion`
-- `con autorizacion suficiente`
-- `para terceros no autorizados`
-- promesas tipo `garantizamos cita`
-- promesas tipo `tramite garantizado`
-- `asesoria legal`
-- `gestoria`
+- Archivo: `public/favicon.svg`.
+- Monograma: `TC`.
+- Fondo: `#05091a`.
+- Acento: `#00e0ff`.
+- `index.html` incluye favicon SVG y `theme-color`.
+- Favicon visible en la pestana del navegador; si no aparece, limpiar cache o abrir en incognito.
 
-## Auditoria Final Realizada
+## BOT
 
-Build local:
+- Ruta: `TuCita/BOT`.
+- Repo: `https://github.com/tuimagenstudios/TuCita`.
+- Estado: separado del repo WEB.
+- Visibilidad: privado.
+- No fue tocado durante esta fase WEB.
+- Funcion: bot Telegram, scraper, monitor, pagos Stripe, PostgreSQL, legal/autorizacion, cifrado, auditoria y RGPD.
 
-```text
-npm run build
-passed
-```
+## Pendientes futuros
 
-Deploy publico:
+1. Revisar legalmente las paginas antes de campanas fuertes.
+2. Definir domicilio legal o profesional seguro.
+3. Definir identificacion fiscal publica si corresponde.
+4. Crear correo legal del dominio si mas adelante conviene.
+5. Actualizar GitHub Actions por warning futuro de Node.js 20.
+6. Alinear contrato del BOT con uso personal, sin terceros y planes intransferibles.
+7. Crear o fortalecer el flujo de ayuda IA dentro del bot.
 
-- `https://tucitabot.es`: 200 OK
-- `https://www.tucitabot.es`: 301 a `https://tucitabot.es/`
-- `http://tucitabot.es`: 301 a HTTPS
-- `http://www.tucitabot.es`: 301 a HTTPS/root
+## Reglas de trabajo futuras
 
-Assets publicos revisados:
-
-- JS del ultimo deploy: 200 OK
-- CSS del ultimo deploy: 200 OK
-
-Visual revisado:
-
-- Desktop: 1366x768
-- Desktop: 1440x900
-- Movil: 390x844
-- Movil: 430x932
-- Movil largo: 390x2200
-
-Resultado visual:
-
-- Hero correcto
-- CTA visible
-- Header correcto
-- Acordeon movil correcto
-- Footer sobrio
-- Sin overflow horizontal visible
-- Sin textos cortados relevantes
-- Sin contenido viejo de cache
-
-Consola / recursos:
-
-- Sin errores de consola capturados
-- Sin recursos HTTP 4xx/5xx capturados
-
-Seguridad repo WEB:
-
-- No `.env` trackeado
-- No `node_modules` trackeado
-- No `dist` trackeado
-- No logs trackeados
-- No datos personales trackeados
-- No contratos reales trackeados
-- No secretos trackeados
-
-## Pendientes Reales
-
-1. Crear paginas legales reales:
-   - Aviso legal
-   - Politica de privacidad
-   - Terminos del servicio
-   - Politica de reembolso
-2. Revisar copy legal final con criterio profesional antes de campañas de pago.
-3. Probar en movil real fisico.
-4. Cuando existan las paginas legales, enlazarlas desde el footer.
-
-## Reglas de Trabajo Futuras
-
-- WEB debe seguir siendo frontend estatico.
-- No meter backend en WEB.
+- No tocar BOT para cambios de WEB.
 - No subir `.env`.
 - No subir tokens.
 - No subir datos personales.
 - No subir contratos reales.
 - No subir logs.
-- No tocar BOT para cambios de WEB.
+- No meter backend en WEB.
 - Antes de cada commit/push en WEB:
-  - ejecutar `npm run build`
-  - buscar secretos
-  - buscar copy viejo de contacto/correo
-  - verificar que `dist` y `node_modules` no esten trackeados
+  - ejecutar `npm run build`;
+  - revisar secretos;
+  - revisar copy viejo de correo o soporte;
+  - verificar que `dist` y `node_modules` no esten trackeados.
