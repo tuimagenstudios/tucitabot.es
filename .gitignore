@@ -1,0 +1,16 @@
+# Future web build artifacts
+node_modules/
+dist/
+build/
+.vite/
+
+# Local env files for the web project
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
