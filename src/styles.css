@@ -266,6 +266,14 @@ h1 span {
   font-size: 0.78rem;
 }
 
+.support-note {
+  max-width: 620px;
+  margin: 16px 0 0;
+  color: var(--muted-strong);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
 .trust-note {
   max-width: 620px;
   margin: 18px 0 0;
@@ -468,7 +476,16 @@ h1 span {
 }
 
 .info-tabs {
+  position: relative;
   padding: 12px 0 34px;
+}
+
+.anchor-target {
+  position: absolute;
+  top: -24px;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
 }
 
 .section-heading {
@@ -663,6 +680,16 @@ h1 span {
   color: var(--muted);
 }
 
+.text-link {
+  color: var(--cyan);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-shadow: 0 0 18px rgba(0, 224, 255, 0.28);
+}
+
 .mobile-accordion {
   display: none;
 }
@@ -835,6 +862,7 @@ h1 span {
 
   .hero-subcopy,
   .trust-note,
+  .support-note,
   .micro-label {
     max-width: min(100%, 320px);
     overflow-wrap: break-word;

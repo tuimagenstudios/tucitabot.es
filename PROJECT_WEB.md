@@ -127,8 +127,10 @@ Si. Con /revocar eliminamos tus datos personales.
 ¿Quien esta detras?
 Tuimagen Studios.
 
-Contacto:
-hola@tucitabot.es
+Ayuda y consultas:
+https://t.me/TuCitaMadrid_bot?start=web_ayuda
+
+Primero te guia el asistente. Si hace falta revisar tu caso, podras dejar una consulta por escrito dentro del bot.
 ```
 
 ## Tono Visual
@@ -174,9 +176,10 @@ Texto minimo visible:
 
 ```text
 TuCita es un servicio privado independiente y no pertenece a la Administracion Publica.
-El uso del servicio requiere autorizacion expresa del usuario.
+El uso del servicio requiere autorizacion aceptada por el propio titular dentro del bot.
 Los pagos se gestionan mediante Stripe.
-Contacto: hola@tucitabot.es
+Ayuda y consultas: https://t.me/TuCitaMadrid_bot?start=web_ayuda
+Por seguridad, no se reciben documentos ni datos sensibles fuera del flujo autorizado del bot.
 ```
 
 ## Stack Recomendado

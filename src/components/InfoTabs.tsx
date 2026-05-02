@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 
 type SectionKey = "funciona" | "seguro" | "precio" | "faq";
+
+const HELP_CTA = "https://t.me/TuCitaMadrid_bot?start=web_ayuda";
+const HASH_TO_SECTION: Record<string, SectionKey> = {
+  "#como-funciona": "funciona",
+  "#precio": "precio",
+};
 
 type InfoSection = {
   key: SectionKey;
@@ -17,7 +23,7 @@ const sections: InfoSection[] = [
       <div className="panel-grid three-steps">
         <ol className="step-list">
           <li><span>01</span><strong>Te registras desde Telegram</strong></li>
-          <li><span>02</span><strong>Firmas la autorización y tus datos quedan cifrados</strong></li>
+          <li><span>02</span><strong>Aceptas tu autorización y tus datos quedan cifrados</strong></li>
           <li><span>03</span><strong>TuCita vigila cada 3 minutos y reserva cuando aparece hueco</strong></li>
         </ol>
         <p className="panel-emphasis">Tú solo te presentas a la cita.</p>
@@ -30,13 +36,19 @@ const sections: InfoSection[] = [
     content: (
       <div className="panel-grid">
         <ul className="feature-list">
-          <li>Contrato de autorización real</li>
+          <li>Autorización aceptada por el propio titular</li>
           <li>Datos personales cifrados</li>
           <li>Borrado de datos con /revocar</li>
           <li>Pagos gestionados por Stripe</li>
+          <li>Procesos guiados dentro del bot</li>
         </ul>
         <p className="panel-emphasis">No es magia. Es tecnología legal.</p>
-        <p>Actuamos mediante autorización del usuario. Tú mantienes el control.</p>
+        <p>El titular acepta su autorización dentro del bot. Tú mantienes el control.</p>
+        <p>
+          TuCita trabaja con procesos guiados, registro dentro del bot y autorización
+          aceptada por el propio titular. No ayudamos a falsificar datos, saltarse
+          requisitos legales ni gestionar trámites para terceros.
+        </p>
       </div>
     ),
   },
@@ -57,6 +69,10 @@ const sections: InfoSection[] = [
         <p className="panel-emphasis">
           Si no conseguimos cita en 30 días, devolución total.
         </p>
+        <p>
+          Los planes son personales e intransferibles. Las citas incluidas solo
+          pueden usarse por el titular que completó el flujo dentro del bot.
+        </p>
       </div>
     ),
   },
@@ -67,15 +83,26 @@ const sections: InfoSection[] = [
       <div className="faq-panel">
         <dl>
           <dt>¿Es legal?</dt>
-          <dd>Sí. Firmas una autorización de representación.</dd>
+          <dd>Sí. Cada titular acepta su propia autorización dentro del bot.</dd>
           <dt>¿Y si no hay cita?</dt>
           <dd>Si no conseguimos cita en 30 días, devolución total.</dd>
           <dt>¿Puedo borrar mis datos?</dt>
           <dd>Sí. Con /revocar eliminamos tus datos personales.</dd>
           <dt>¿Quién está detrás?</dt>
           <dd>Tuimagen Studios.</dd>
-          <dt>Contacto:</dt>
-          <dd>hola@tucitabot.es</dd>
+          <dt>Ayuda y consultas:</dt>
+          <dd>
+            Primero te guía el asistente de TuCita. Si tu caso necesita revisión,
+            podrás dejar una consulta por escrito dentro del bot.{" "}
+            <a className="text-link" href={HELP_CTA} target="_blank" rel="noreferrer">
+              Iniciar consulta guiada
+            </a>
+          </dd>
+          <dt>¿Puedo enviar documentos por fuera?</dt>
+          <dd>
+            No. Por seguridad, no se reciben documentos ni datos sensibles fuera del
+            flujo autorizado del bot.
+          </dd>
         </dl>
       </div>
     ),
@@ -85,8 +112,22 @@ const sections: InfoSection[] = [
 function InfoTabs() {
   const [activeKey, setActiveKey] = useState<SectionKey>("funciona");
 
+  useEffect(() => {
+    const syncFromHash = () => {
+      const nextSection = HASH_TO_SECTION[window.location.hash];
+      if (nextSection) {
+        setActiveKey(nextSection);
+      }
+    };
+
+    syncFromHash();
+    window.addEventListener("hashchange", syncFromHash);
+    return () => window.removeEventListener("hashchange", syncFromHash);
+  }, []);
+
   return (
-    <section className="info-tabs" aria-label="Información de TuCita">
+    <section id="como-funciona" className="info-tabs" aria-label="Información de TuCita">
+      <span id="precio" className="anchor-target" aria-hidden="true" />
       <div className="section-heading">
         <span>Respuestas rápidas</span>
         <h2>Lo importante, sin letra pequeña escondida.</h2>
