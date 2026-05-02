@@ -2,7 +2,8 @@ function Header() {
   return (
     <header className="site-header" aria-label="Cabecera principal">
       <a className="brand" href="/" aria-label="TuCita inicio">
-        TuCita
+        <span className="brand-mark" aria-hidden="true">TC</span>
+        <span>TuCita</span>
       </a>
       <div className="header-meta">
         <span>Madrid · Extranjería</span>

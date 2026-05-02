@@ -15,10 +15,10 @@ const sections: InfoSection[] = [
     label: "Cómo funciona",
     content: (
       <div className="panel-grid three-steps">
-        <ol>
-          <li>Te registras desde Telegram</li>
-          <li>Firmas la autorización y tus datos quedan cifrados</li>
-          <li>TuCita vigila cada 3 minutos y reserva cuando aparece hueco</li>
+        <ol className="step-list">
+          <li><span>01</span><strong>Te registras desde Telegram</strong></li>
+          <li><span>02</span><strong>Firmas la autorización y tus datos quedan cifrados</strong></li>
+          <li><span>03</span><strong>TuCita vigila cada 3 minutos y reserva cuando aparece hueco</strong></li>
         </ol>
         <p className="panel-emphasis">Tú solo te presentas a la cita.</p>
       </div>
@@ -29,7 +29,7 @@ const sections: InfoSection[] = [
     label: "Seguro",
     content: (
       <div className="panel-grid">
-        <ul>
+        <ul className="feature-list">
           <li>Contrato de autorización real</li>
           <li>Datos personales cifrados</li>
           <li>Borrado de datos con /revocar</li>
@@ -50,9 +50,9 @@ const sections: InfoSection[] = [
           <strong>TuCita: desde 9,99 €</strong>
         </div>
         <div className="plans">
-          <p>Lite 9,99 € · 1 cita</p>
-          <p>Pro 19,99 € · 3 citas</p>
-          <p>VIP 39 € · 5 citas</p>
+          <p><span>Lite</span> 9,99 € · 1 cita</p>
+          <p><span>Pro</span> 19,99 € · 3 citas</p>
+          <p><span>VIP</span> 39 € · 5 citas</p>
         </div>
         <p className="panel-emphasis">
           Si no conseguimos cita en 30 días, devolución total.
@@ -87,6 +87,10 @@ function InfoTabs() {
 
   return (
     <section className="info-tabs" aria-label="Información de TuCita">
+      <div className="section-heading">
+        <span>Respuestas rápidas</span>
+        <h2>Lo importante, sin letra pequeña escondida.</h2>
+      </div>
       <div className="tab-list" role="tablist" aria-label="Secciones informativas">
         {sections.map((section) => (
           <button
