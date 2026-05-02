@@ -1,5 +1,27 @@
 # TuCitaBot.es - Plan Web
 
+## Estado Actual
+
+Actualizado: 2 de mayo de 2026.
+
+Hecho:
+
+- Repo GitHub independiente creado: `tuimagenstudios/tucitabot.es`.
+- URL: `https://github.com/tuimagenstudios/tucitabot.es`.
+- Visibilidad actual: privado.
+- Rama principal: `main`.
+- Primer commit subido con documentacion inicial.
+- Carpeta local: `web_tucitabot_es/`.
+- Separado del repo del bot para evitar romper la aplicacion principal.
+
+Pendiente:
+
+- Confirmar stack.
+- Crear codigo inicial de la landing.
+- Añadir responsive.
+- Preparar deploy.
+- Apuntar dominio `tucitabot.es`.
+
 ## Objetivo
 
 Crear la landing principal de `tucitabot.es` para explicar TuCita, generar confianza y llevar al usuario al bot de Telegram.
@@ -167,10 +189,12 @@ Deploy en Vercel, Netlify o Railway static
 
 ## Prioridad
 
-1. Confirmar stack.
-2. Crear landing estatica.
-3. Añadir responsive.
-4. Conectar CTA a Telegram.
-5. Añadir legales minimos.
-6. Preparar deploy.
-7. Apuntar dominio `tucitabot.es`.
+1. Hecho: crear repo independiente.
+2. Hecho: subir documentacion inicial.
+3. Pendiente: confirmar stack.
+4. Pendiente: crear landing estatica.
+5. Pendiente: añadir responsive.
+6. Pendiente: conectar CTA a Telegram.
+7. Pendiente: añadir legales minimos.
+8. Pendiente: preparar deploy.
+9. Pendiente: apuntar dominio `tucitabot.es`.

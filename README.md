@@ -2,6 +2,19 @@
 
 Carpeta separada para la futura pagina web de `tucitabot.es`.
 
+Repo GitHub:
+
+```text
+https://github.com/tuimagenstudios/tucitabot.es
+```
+
+Estado actual:
+
+- Repo independiente creado.
+- Rama principal: `main`.
+- Primer commit subido con documentacion inicial.
+- Sin codigo de aplicacion todavia.
+
 Esta carpeta existe para aislar la landing de marketing del bot principal. El bot de Telegram, el scraper, pagos, base de datos y tests actuales siguen viviendo en la raiz del proyecto y en sus carpetas actuales.
 
 ## Proposito
