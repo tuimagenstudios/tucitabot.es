@@ -11,7 +11,7 @@ Hecho:
 - Visibilidad actual: privado.
 - Rama principal: `main`.
 - Primer commit subido con documentacion inicial.
-- Carpeta local: `web_tucitabot_es/`.
+- Carpeta local: `WEB/`.
 - Separado del repo del bot para evitar romper la aplicacion principal.
 
 Pendiente:
@@ -184,17 +184,17 @@ Contacto: hola@tucitabot.es
 ```text
 Vite + React + TypeScript
 CSS normal o Tailwind
-Deploy en Vercel, Netlify o Railway static
+Deploy en GitHub Pages con dominio propio `tucitabot.es`
 ```
 
 ## Prioridad
 
 1. Hecho: crear repo independiente.
 2. Hecho: subir documentacion inicial.
-3. Pendiente: confirmar stack.
-4. Pendiente: crear landing estatica.
-5. Pendiente: añadir responsive.
-6. Pendiente: conectar CTA a Telegram.
-7. Pendiente: añadir legales minimos.
-8. Pendiente: preparar deploy.
+3. Hecho: confirmar stack Vite + React + TypeScript + CSS normal.
+4. Hecho: crear landing estatica inicial.
+5. Hecho: añadir responsive base.
+6. Hecho: conectar CTA a Telegram.
+7. Pendiente: añadir legales minimos reales.
+8. Hecho: preparar deploy con GitHub Pages.
 9. Pendiente: apuntar dominio `tucitabot.es`.

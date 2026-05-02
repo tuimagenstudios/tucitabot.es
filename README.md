@@ -15,7 +15,7 @@ Estado actual:
 - Base tecnica creada con Vite + React + TypeScript.
 - Frontend estatico sin backend, secretos ni variables privadas.
 
-Esta carpeta existe para aislar la landing de marketing del bot principal. El bot de Telegram, el scraper, pagos, base de datos y tests actuales siguen viviendo en la raiz del proyecto y en sus carpetas actuales.
+Esta carpeta existe para aislar la landing de marketing del bot principal. El bot de Telegram, el scraper, pagos, base de datos y tests viven en la carpeta hermana `BOT/`.
 
 ## Stack
 
@@ -38,14 +38,14 @@ Crear una landing de conversion rapida para TuCita:
 
 Esta carpeta no debe modificar:
 
-- `main.py`
-- `telegram_bot/`
-- `scraper/`
-- `cerebro/`
-- `database/`
-- `pagos/`
-- `legal/`
-- `tests/`
+- `../BOT/main.py`
+- `../BOT/telegram_bot/`
+- `../BOT/scraper/`
+- `../BOT/cerebro/`
+- `../BOT/database/`
+- `../BOT/pagos/`
+- `../BOT/legal/`
+- `../BOT/tests/`
 
 La web debe poder desarrollarse, probarse y desplegarse de forma independiente.
 
