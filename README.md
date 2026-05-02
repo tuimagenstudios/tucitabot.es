@@ -97,6 +97,37 @@ tucitabot.es
 
 El archivo `public/CNAME` contiene el dominio para GitHub Pages.
 
+## Deploy en GitHub Pages
+
+Este sitio se publica con GitHub Pages.
+
+El workflow de deploy está en:
+
+```text
+.github/workflows/deploy.yml
+```
+
+El proceso de build genera la carpeta:
+
+```text
+dist/
+```
+
+El dominio previsto es:
+
+```text
+tucitabot.es
+```
+
+Para activar Pages:
+
+1. Ir a Settings > Pages.
+2. En Source seleccionar GitHub Actions.
+3. Configurar Custom domain: tucitabot.es.
+4. Activar Enforce HTTPS cuando GitHub lo permita.
+
+Nota importante: actualmente el repo está privado. Para usar GitHub Pages gratis probablemente habrá que hacerlo público. Antes de cambiar visibilidad, revisar que el repo no contiene secretos ni código del bot.
+
 ## Plan de Producto
 
 El plan completo de marketing, copy y diseño esta documentado en `PROJECT_WEB.md`.
