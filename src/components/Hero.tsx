@@ -9,12 +9,13 @@ function Hero() {
           <span>Lanzamiento inminente · Primeros 20 usuarios sin coste</span>
         </p>
         <h1 id="hero-title">
-          Llevas semanas sin cita.
-          <span>TuCita la vigila y la reserva por ti.</span>
+          Citas de Extranjería en Madrid.
+          <span>TuCita vigila disponibilidad por ti.</span>
         </h1>
         <p className="hero-subcopy">
-          Un bot privado para citas de Extranjería en Madrid. Funciona 24/7, con
-          autorización del propio titular y datos cifrados.
+          Un bot privado para vigilar citas de Extranjería en Madrid y ayudarte
+          cuando aparezca disponibilidad compatible. Funciona 24/7, con autorización
+          del propio titular y datos cifrados.
         </p>
         <div className="hero-actions">
           <a className="primary-cta" href={TELEGRAM_CTA} target="_blank" rel="noreferrer">
@@ -28,8 +29,8 @@ function Hero() {
         </p>
         <p className="trust-note">
           Servicio privado independiente. No pertenecemos a la Administración Pública.
-          Por seguridad, no se reciben documentos ni datos sensibles fuera del flujo
-          autorizado del bot.
+          Cada usuario actúa en nombre propio. Por seguridad, no se reciben documentos
+          ni datos sensibles fuera del flujo autorizado del bot.
         </p>
       </div>
 

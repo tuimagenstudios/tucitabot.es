@@ -24,9 +24,9 @@ const sections: InfoSection[] = [
         <ol className="step-list">
           <li><span>01</span><strong>Te registras desde Telegram</strong></li>
           <li><span>02</span><strong>Aceptas tu autorización y tus datos quedan cifrados</strong></li>
-          <li><span>03</span><strong>TuCita vigila cada 3 minutos y reserva cuando aparece hueco</strong></li>
+          <li><span>03</span><strong>TuCita revisa disponibilidad y actúa si aparece un hueco compatible</strong></li>
         </ol>
-        <p className="panel-emphasis">Tú solo te presentas a la cita.</p>
+        <p className="panel-emphasis">Cuando haya cita reservada, tú solo te presentas.</p>
       </div>
     ),
   },
@@ -67,7 +67,7 @@ const sections: InfoSection[] = [
           <p><span>VIP</span> 39 € · 5 citas</p>
         </div>
         <p className="panel-emphasis">
-          Si no conseguimos cita en 30 días, devolución total.
+          Si no se reserva ninguna cita en 30 días, devolución total.
         </p>
         <p>
           Los planes son personales e intransferibles. Las citas incluidas solo
@@ -85,7 +85,7 @@ const sections: InfoSection[] = [
           <dt>¿Es legal?</dt>
           <dd>Sí. Cada titular acepta su propia autorización dentro del bot.</dd>
           <dt>¿Y si no hay cita?</dt>
-          <dd>Si no conseguimos cita en 30 días, devolución total.</dd>
+          <dd>Si no se reserva ninguna cita en 30 días, devolución total según la política de reembolso.</dd>
           <dt>¿Puedo borrar mis datos?</dt>
           <dd>Sí. Con /revocar eliminamos tus datos personales.</dd>
           <dt>¿Quién está detrás?</dt>

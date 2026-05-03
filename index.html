@@ -4,12 +4,115 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://tucitabot.es/" />
     <meta name="theme-color" content="#05091a" />
-    <title>TuCita | Citas de Extranjería en Madrid</title>
+    <title>TuCitaBot.es | Citas de Extranjería en Madrid</title>
     <meta
       name="description"
-      content="TuCita vigila citas de Extranjería en Madrid y puede reservar por ti con autorización del propio titular, datos cifrados y pago seguro mediante Stripe."
+      content="TuCita es un bot privado para vigilar citas de Extranjería en Madrid con autorización del titular, datos cifrados y planes personales."
     />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="TuCitaBot.es" />
+    <meta property="og:url" content="https://tucitabot.es/" />
+    <meta property="og:title" content="TuCitaBot.es | Citas de Extranjería en Madrid" />
+    <meta
+      property="og:description"
+      content="Bot privado para vigilar citas de Extranjería en Madrid con autorización del titular, datos cifrados y planes personales."
+    />
+    <meta property="og:image" content="https://tucitabot.es/og-tucita.svg" />
+    <meta property="og:image:alt" content="TuCitaBot.es, bot privado para citas de Extranjería en Madrid" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TuCitaBot.es | Citas de Extranjería en Madrid" />
+    <meta
+      name="twitter:description"
+      content="Bot privado para vigilar citas de Extranjería en Madrid con autorización del titular, datos cifrados y planes personales."
+    />
+    <meta name="twitter:image" content="https://tucitabot.es/og-tucita.svg" />
+    <meta name="twitter:image:alt" content="TuCitaBot.es, bot privado para citas de Extranjería en Madrid" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://tucitabot.es/#organization",
+            "name": "TuCita",
+            "url": "https://tucitabot.es/",
+            "logo": "https://tucitabot.es/favicon.svg",
+            "description": "Servicio privado independiente para ayuda guiada en la vigilancia de citas de Extranjería en Madrid."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://tucitabot.es/#website",
+            "url": "https://tucitabot.es/",
+            "name": "TuCitaBot.es",
+            "inLanguage": "es-ES",
+            "publisher": {
+              "@id": "https://tucitabot.es/#organization"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://tucitabot.es/#service",
+            "name": "Bot privado para citas de Extranjería en Madrid",
+            "serviceType": "Ayuda guiada privada para vigilar disponibilidad de citas de Extranjería",
+            "url": "https://tucitabot.es/",
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": "Madrid"
+            },
+            "provider": {
+              "@id": "https://tucitabot.es/#organization"
+            },
+            "description": "TuCita ayuda a vigilar disponibilidad de citas de Extranjería en Madrid dentro de un flujo guiado, con autorización aceptada por el propio titular y planes personales e intransferibles.",
+            "termsOfService": "https://tucitabot.es/legal/terminos-servicio.html"
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://tucitabot.es/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Es legal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sí. Cada titular acepta su propia autorización dentro del bot. TuCita es un servicio privado independiente y no pertenece a la Administración Pública."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Y si no hay cita?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Si no se reserva ninguna cita en 30 días, se aplica la devolución total según la política de reembolso del servicio."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Puedo borrar mis datos?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sí. Con el comando /revocar se eliminan los datos personales asociados al flujo del bot."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Puedo enviar documentos por fuera?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Por seguridad, no se reciben documentos ni datos sensibles fuera del flujo autorizado del bot."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

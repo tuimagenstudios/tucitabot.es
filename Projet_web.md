@@ -57,7 +57,7 @@ Datos legales actuales:
 - Identificacion fiscal: pendiente de revision legal.
 - Domicilio legal: pendiente de definir.
 - No publicar numero de llamada.
-- Email legal temporal solo para comunicaciones legales, privacidad y ejercicio de derechos: `tuimagenstudio@gmail.com`.
+- Contacto legal/de privacidad: pendiente de definir tras revision legal.
 
 ## Privacidad de historial
 
