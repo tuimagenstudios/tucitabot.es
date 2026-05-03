@@ -2,6 +2,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import InfoTabs from "./components/InfoTabs";
+import UsefulGuides from "./components/UsefulGuides";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Hero />
       <InfoTabs />
+      <UsefulGuides />
       <Footer />
     </main>
   );
