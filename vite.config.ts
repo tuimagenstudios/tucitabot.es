@@ -9,6 +9,7 @@ export default defineConfig({
       input: {
         main: "index.html",
         citaExtranjeriaMadrid: "cita-previa-extranjeria-madrid/index.html",
+        noHayCitasMadrid: "no-hay-citas-extranjeria-madrid/index.html",
         tieHuellasMadrid: "tie-toma-huellas-madrid/index.html",
       },
     },

@@ -20,6 +20,7 @@ function Footer() {
       </p>
       <nav aria-label="Enlaces legales del pie">
         <a href="/cita-previa-extranjeria-madrid/">Guía cita extranjería Madrid</a>
+        <a href="/no-hay-citas-extranjeria-madrid/">No hay citas en Madrid</a>
         <a href="/tie-toma-huellas-madrid/">Guía TIE huellas Madrid</a>
         <a href="/legal/aviso-legal.html">Aviso legal</a>
         <a href="/legal/politica-privacidad.html">Política de privacidad</a>
