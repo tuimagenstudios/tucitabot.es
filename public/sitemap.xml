@@ -5,6 +5,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://tucitabot.es/cita-previa-extranjeria-madrid/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tucitabot.es/tie-toma-huellas-madrid/</loc>
     <priority>0.7</priority>
   </url>

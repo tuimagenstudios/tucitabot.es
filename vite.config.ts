@@ -8,6 +8,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "index.html",
+        citaExtranjeriaMadrid: "cita-previa-extranjeria-madrid/index.html",
         tieHuellasMadrid: "tie-toma-huellas-madrid/index.html",
       },
     },
