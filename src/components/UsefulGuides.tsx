@@ -41,7 +41,7 @@ function UsefulGuides() {
         ))}
       </div>
       <p className="guides-note">
-        No se aceptan trámites para terceros ni se ayuda a saltarse requisitos oficiales.
+        Servicio pensado para uso personal del titular, siempre dentro de los requisitos oficiales del trámite.
       </p>
     </section>
   );
